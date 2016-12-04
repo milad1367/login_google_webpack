@@ -1,5 +1,7 @@
 import { Component,NgZone } from '@angular/core';
 import {InfoProfile} from './info-profile';
+declare var gapi: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
