@@ -9,6 +9,16 @@
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="922544233491-jk6o8ko6h2ga4eja6ku7uq6m7c0orq8g.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
 <link href="styles.d41d8cd98f00b204e9800998ecf8427e.bundle.css" rel="stylesheet"></head>
 <body>
   <app-root>Loading...</app-root>
